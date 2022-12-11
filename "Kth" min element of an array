@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int kth_smallest(vector<int> v,int k) {
+    sort(v.begin(),v.end());
+    return v[k-1];
+}
+int main() {
+    //Vector Size
+    int n; cin>>n;
+    // Vector Elements
+    vector<int> v;
+    int ele;
+    for(int i=0;i<n;i++) {
+        cin>>ele; v.push_back(ele);
+    }
+    int k; cin>>k;
+    int ans = kth_smallest(v,k);
+    cout<<"Min Element = "<<ans<<endl;
+}
