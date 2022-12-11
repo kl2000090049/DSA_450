@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    //Vector Size
+    int n; cin>>n;
+    // Vector Elements
+    vector<int> v;
+    int ele;
+    for(int i=0;i<n;i++) {
+        cin>>ele; v.push_back(ele);
+    }
+    cout<<"Minimum Element = "<<*min_element(v.begin(),v.end())<<endl;
+    cout<<"Maximum Element = "<<*max_element(v.begin(),v.end());
+}
