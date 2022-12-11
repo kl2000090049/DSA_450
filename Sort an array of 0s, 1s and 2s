@@ -1,0 +1,39 @@
+//Also known as "Dutch National Flag" Problem
+#include<bits/stdc++.h>
+using namespace std;
+void dutch(vector<int> v) {
+    int c0=0,c1=0,c2=0;
+    for(int i=0;i<v.size();i++) {
+        if(v[i]==0) c0+=1;
+        if(v[i]==1) c1+=1;
+        if(v[i]==2) c2+=1;
+    }
+    int count = 0;
+    while(c0>0) {
+        v[count] = 0;
+        count+=1; c0-=1;
+    }
+    while(c1>0) {
+        v[count] = 1;
+        count+=1; c1-=1;
+    }
+    while(c2>0) {
+        v[count] = 2;
+        count+=1; c2-=1;
+    }
+    
+    for(int i=0;i<v.size();i++) 
+        cout<<v[i]<<" ";
+}
+
+int main() {
+    int n;cin>>n;               //Vector Size
+    vector<int> v;
+    int ele;
+    for(int i=0;i<n;i++) {
+        cin>>ele;
+        v.push_back(ele);       //Vector Elements
+    }
+    dutch(v);
+    
+}
