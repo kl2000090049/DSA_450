@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+void logic(vector<int> v) {
+    int low=0,top=v.size()-1;
+    while(low<top) {
+        if(v[low]<0) {
+            low++;
+        }
+        else if(v[top]>0) {
+            top--;
+        }
+        else{
+            swap(v[low],v[top]);
+        }
+    }
+    for(int i=0;i<v.size();i++) 
+        cout<<v[i]<<" ";
+}
+int main() {
+    int n; cin>>n;
+    vector<int> v;
+    int ele;
+    for(int i=0;i<n;i++) {
+        cin>>ele;
+        v.push_back(ele);
+    }
+    logic(v);
+}
