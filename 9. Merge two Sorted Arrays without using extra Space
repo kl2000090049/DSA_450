@@ -1,0 +1,20 @@
+// Merge two Sorted Arrays without using extra Space
+#include<bits/stdc++.h>
+using namespace std;
+void mergeArrays(int a[],int b[],int n,int m) {
+    map<int,int> mp;
+    for(int i=0;i<n;i++) mp[a[i]]++;
+    for(int i=0;i<m;i++) mp[b[i]]++;
+    for(auto x:mp){
+        for(int i=0;i<x.second;i++) 
+            cout<<x.first<<" ";
+    }
+    
+}
+int main() {
+    int n,m;
+    cin>>n>>m;
+    int a[n],b[m];
+    for(int i=0;i<n;i++) cin>>a[i];
+    for(int i=0;i<m;i++) cin>>b[i];  
+}
